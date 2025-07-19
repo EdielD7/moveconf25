@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVE CONFERENCE '25 - Linha do Tempo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --cor-fundo: #100a1c;
+            --cor-roxo-principal: #3a1a68;
+            --cor-magenta-destaque: #d43f8d;
+            --cor-branco-texto: #f0f0f0;
+            --fonte-titulo: 'Anton', sans-serif;
+            --fonte-corpo: 'Montserrat', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--fonte-corpo);
+            background-color: var(--cor-fundo);
+            color: var(--cor-branco-texto);
+        }
+        h1, h2, h3, h4 {
+            font-family: var(--fonte-titulo);
+        }
+        .hero-section {
+            /* Imagem de fundo move-bg.jpg */
+            background: url('https://i.imgur.com/uQfV5A0.jpg') no-repeat center center/cover;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: var(--cor-roxo-principal);
+            border-radius: 2px;
+        }
+        .timeline-item {
+            width: calc(50% - 40px);
+        }
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--cor-magenta-destaque);
+            border: 4px solid var(--cor-fundo);
+        }
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item {
+                width: calc(100% - 60px);
+                align-self: flex-end;
+            }
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[var(--cor-fundo)]">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section min-h-screen flex flex-col justify-center items-center text-center p-5 relative">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10">
+            <h1 class="text-6xl md:text-8xl text-white tracking-wider" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">MOVE CONFERENCE '25</h1>
+            <h2 class="text-3xl md:text-4xl text-white/90 mt-4" style="font-family: var(--fonte-corpo); font-weight: 700;">DE MALAS PRONTAS</h2>
+            <p class="text-lg md:text-xl text-white/80 mt-8 max-w-2xl mx-auto">"PORTANTO, VIGIEM, POIS VOCÊS NÃO SABEM O DIA NEM A HORA!" - Mateus 25.13</p>
+        </div>
+    </section>
+
+    <!-- QUICK LINKS BAR -->
+    <nav class="bg-black/30 sticky top-0 z-40 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 text-center">
+            <a href="#program" class="text-white font-bold py-4 px-2 hover:bg-[var(--cor-magenta-destaque)] transition-colors duration-300">PROGRAMAÇÃO</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgg3TrHgupQxiZniXSt4bMd-1Mgh15w7htaeoRWdEozRfzLA/viewform?usp=dialog" target="_blank" class="text-white font-bold py-4 px-2 hover:bg-[var(--cor-magenta-destaque)] transition-colors duration-300">PESQUISA</a>
+            
+            <a href="https://www.instagram.com/radicamping/" target="_blank" class="text-white font-bold py-4 px-2 hover:bg-[var(--cor-magenta-destaque)] transition-colors duration-300">INSTAGRAM</a>
+            <a href="https://www.instagram.com/mjovemf/" target="_blank" class="text-white font-bold py-4 px-2 hover:bg-[var(--cor-magenta-destaque)] transition-colors duration-300">INSTAGRAM</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="py-16 px-5">
+        <!-- TIMELINE SECTION -->
+        <section id="program" class="max-w-5xl mx-auto">
+            <h2 class="text-5xl text-center mb-16 text-[var(--cor-magenta-destaque)]">Nosso Roteiro</h2>
+            
+            <div class="relative flex flex-col gap-y-12 timeline">
+                <!-- SEXTA -->
+                <h3 class="text-4xl text-center bg-[var(--cor-fundo)] self-center px-6 z-10">SEXTA</h3>
+                
+                <div class="relative flex flex-col p-6 bg-black/20 rounded-xl timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-2xl text-[var(--cor-magenta-destaque)]">18:30 - SESSÃO I</h4>
+                    <ul class="mt-4 space-y-2 list-disc list-inside text-white/90">
+                        <li>Credenciamento</li>
+                        <li>19:00 - Abertura com Host</li>
+                        <li>19:10 - Louvor</li>
+                        <li>19:30 - Dança (Bailarinos IDPB)</li>
+                        <li>19:40 - Louvor</li>
+                        <li>20:00 - Ministração (Mateus 25.13)</li>
+                        <li>21:00 - Encerramento</li>
+                    </ul>
+                </div>
+
+                <!-- SÁBADO -->
+                <h3 class="text-4xl text-center bg-[var(--cor-fundo)] self-center px-6 z-10">SÁBADO</h3>
+
+                <div class="relative flex flex-col p-6 bg-black/20 rounded-xl timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-2xl text-[var(--cor-magenta-destaque)]">15:00 - SESSÃO II</h4>
+                    <ul class="mt-4 space-y-2 list-disc list-inside text-white/90">
+                        <li>Louvor</li>
+                        <li>15:20 - Oficinas</li>
+                        <li>16:20 - Intervalo</li>
+                        <li>16:30 - Oficinas</li>
+                        <li>18:00 - Coffee Break</li>
+                    </ul>
+                </div>
+
+                <div class="relative flex flex-col p-6 bg-black/20 rounded-xl timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-2xl text-[var(--cor-magenta-destaque)]">19:00 - SESSÃO III</h4>
+                    <ul class="mt-4 space-y-2 list-disc list-inside text-white/90">
+                        <li>RDC</li>
+                        <li>19:05 - Host (Karime)</li>
+                        <li>19:10 - Teatro</li>
+                        <li>19:20 - Louvor</li>
+                        <li>20:00 - Ministração "De Malas Prontas"</li>
+                        <li>21:30 - Considerações Finais</li>
+                        <li>22:00 - Encerramento</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKSHOPS SECTION -->
+        <section id="workshops" class="max-w-5xl mx-auto mt-24">
+            <h2 class="text-5xl text-center mb-16 text-[var(--cor-magenta-destaque)]">Prepare sua Bagagem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-[var(--cor-roxo-principal)] p-8 rounded-xl transition-transform duration-300 hover:-translate-y-2">
+                    <h3 class="text-3xl mb-3">Desfazendo a Bagagem</h3>
+                    <p class="text-white/80 mb-4 text-lg">Libertando-se dos Vícios e Pecados (Deixar para trás o que atrasa a jornada)</p>
+                    <p class="text-right font-bold italic text-xl">- Ediel</p>
+                </div>
+                <div class="bg-[var(--cor-roxo-principal)] p-8 rounded-xl transition-transform duration-300 hover:-translate-y-2">
+                    <h3 class="text-3xl mb-3">Passaporte do Céu</h3>
+                    <p class="text-white/80 mb-4 text-lg">Identidade e Propósito no Reino (Descobrindo quem você é e para onde está indo)</p>
+                    <p class="text-right font-bold italic text-xl">- Divaney</p>
+                </div>
+                <div class="bg-[var(--cor-roxo-principal)] p-8 rounded-xl transition-transform duration-300 hover:-translate-y-2">
+                    <h3 class="text-3xl mb-3">Dividindo o Fone</h3>
+                    <p class="text-white/80 mb-4 text-lg">Relacionamentos que Edificam na Jornada (Escolhendo bem quem vai ao seu lado)</p>
+                    <p class="text-right font-bold italic text-xl">- Tammyze</p>
+                </div>
+                <div class="bg-[var(--cor-roxo-principal)] p-8 rounded-xl transition-transform duration-300 hover:-translate-y-2">
+                    <h3 class="text-3xl mb-3">Turbulências Internas</h3>
+                    <p class="text-white/80 mb-4 text-lg">Cuidando da Mente e do Coração na Viagem (Preparando a alma para um voo tranquilo)</p>
+                    <p class="text-right font-bold italic text-xl">- Tabita</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CUSTOM ALERT MODAL -->
+    <div id="custom-alert" class="fixed inset-0 bg-black/70 flex items-center justify-center p-5 opacity-0 pointer-events-none z-50 transition-opacity duration-300">
+        <div class="bg-white text-gray-800 rounded-lg shadow-xl max-w-sm w-full p-6 text-center transform scale-95 transition-transform duration-300">
+            <h3 class="text-xl font-bold mb-4">Aviso</h3>
+            <p id="custom-alert-message" class="mb-6">Mensagem aqui.</p>
+            <button id="custom-alert-close" class="bg-gray-800 text-white py-2 px-6 rounded-lg hover:bg-gray-700">OK</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-10 mt-16 border-t border-[var(--cor-roxo-principal)]">
+        <p class="text-xl tracking-widest opacity-80" style="font-family: var(--fonte-titulo);">1ª CONF JOVENS FILADÉLFIA</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // CUSTOM ALERT LOGIC
+            const customAlert = document.getElementById('custom-alert');
+            const customAlertModal = customAlert.querySelector('div');
+            const customAlertMessage = document.getElementById('custom-alert-message');
+            const customAlertClose = document.getElementById('custom-alert-close');
+            const radicampingLink = document.getElementById('radicamping-link');
+
+            const showAlert = (message) => {
+                customAlertMessage.textContent = message;
+                customAlert.classList.remove('opacity-0', 'pointer-events-none');
+                setTimeout(() => customAlertModal.classList.remove('scale-95'), 10);
+            };
+            
+            const hideAlert = () => {
+                customAlertModal.classList.add('scale-95');
+                customAlert.classList.add('opacity-0', 'pointer-events-none');
+            };
+
+            radicampingLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                showAlert('O link para inscrição no Radicamping 2025 será disponibilizado em breve!');
+            });
+            customAlertClose.addEventListener('click', hideAlert);
+        });
+    </script>
+</body>
+</html>
